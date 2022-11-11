@@ -86,11 +86,18 @@ class _PostCardState extends State<PostCard> {
             ).copyWith(right: 0),
             child: Row(
               children: <Widget>[
-                CircleAvatar(
-                  radius: 16,
-                  backgroundImage: NetworkImage(
-                    widget.snap['profImage'].toString(),
+                InkWell(
+                  child: CircleAvatar(
+                    radius: 16,
+                    backgroundImage: NetworkImage(
+                      widget.snap['profImage'].toString(),
+                    ),
                   ),
+                  onTap: () {
+                    // TODO redirecting to the profile page of the specifica user
+                    print("From the feed Screen..!");
+                    // print(widget.snap);
+                  },
                 ),
                 Expanded(
                   child: Padding(

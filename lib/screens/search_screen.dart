@@ -54,13 +54,19 @@ class _SearchScreenState extends State<SearchScreen> {
                   itemCount: (snapshot.data! as dynamic).docs.length,
                   itemBuilder: (context, index) {
                     return InkWell(
-                      onTap: () => Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) => ProfileScreen(
-                            uid: (snapshot.data! as dynamic).docs[index]['uid'],
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => ProfileScreen(
+                              uid: (snapshot.data! as dynamic).docs[index]
+                                  ['uid'],
+                            ),
                           ),
-                        ),
-                      ),
+                        );
+
+                        print("From the search Screen");
+                        print((snapshot.data! as dynamic).docs[index]['uid']);
+                      },
                       child: ListTile(
                         leading: CircleAvatar(
                           backgroundImage: NetworkImage(

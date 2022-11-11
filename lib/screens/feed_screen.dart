@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:photo_sharing_application/utils/colors.dart';
 import 'package:photo_sharing_application/utils/global_variable.dart';
 import 'package:photo_sharing_application/widgets/post_card.dart';
