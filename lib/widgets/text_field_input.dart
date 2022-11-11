@@ -20,17 +20,17 @@ class TextFieldInput extends StatelessWidget {
     );
 
     return TextField(
-      controller: textEditingController,
-      decoration: InputDecoration(
-        hintText: hintText,
-        border: inputBorder,
-        focusedBorder: inputBorder,
-        enabledBorder: inputBorder,
-        filled: true,
-        contentPadding: const EdgeInsets.all(8),
-      ),
-      keyboardType: textInputType,
-      obscureText: isPass,
-    );
+        controller: textEditingController,
+        decoration: InputDecoration(
+          hintText: hintText,
+          border: inputBorder,
+          focusedBorder: inputBorder,
+          enabledBorder: inputBorder,
+          filled: true,
+          contentPadding: const EdgeInsets.all(8),
+        ),
+        keyboardType: textInputType,
+        obscureText: isPass,
+        textInputAction: TextInputAction.next);
   }
 }
